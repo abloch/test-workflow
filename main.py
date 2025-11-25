@@ -1,11 +1,4 @@
-from kubiya import workflow
+import json
+from wf import wf
 
-def main():
-     wf = (
-    workflow("data-pipeline")
-        .description("ETL pipeline for customer data processing")
-)
-
-
-if __name__ == "__main__":
-    main()
+print(json.dumps(wf.to_dict(), indent=4))
